@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" href="sellForm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+</head>
+
+<body>
+    <div class="mainSell">
+        <div class="divSell1"></div>
+        <div class="divSell2">
+            <form class="mainProduct">
+                <ul class="mainProductUL">
+                    <li class="mainProductLi">
+                        <input type="text" id="product_name" name="" class="inputFieldProduct splitFormProductLeft"
+                            placeholder="Ad Title" />
+                        <input type="text" id="product_desp" name="" class="inputFieldProduct splitFormProductRight"
+                            placeholder="Short Description" />
+
+                    </li>
+                    <li class="mainProductLi">
+                        <input type="text" id="product_price" name=""
+                            class="inputFieldProduct splitFormProductLeft" placeholder="Price" />
+                        <input type="text" id="product_location" name="" class="inputFieldProduct splitFormProductRight"
+                            placeholder="Place and City" />
+                    </li>
+                    <li class="mainProductLi">
+                        <input type="text" id="product_date" name="" class="inputFieldProduct splitFormProductLeft" placeholder="Date" />
+                        <input type="file" id="product_Image" name="" class="inputFieldProduct splitFormProductImage" />
+                    </li>
+                    <li class="mainProductLi">
+                        <button class="btnSubmitProduct" onClick="sellForm(event)">Submit</button>
+                    </li>
+
+                </ul>
+            </form>
+        </div>
+        <div class="divSell3"></div>
+    </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-storage.js"></script>
+
+
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyA8L81Y5nvin0UP9teIT4m6WdunZFBPryg",
+        authDomain: "olx-web-6cc22.firebaseapp.com",
+        databaseURL: "https://olx-web-6cc22.firebaseio.com",
+        projectId: "olx-web-6cc22",
+        storageBucket: "olx-web-6cc22.appspot.com",
+        messagingSenderId: "985986096316",
+        appId: "1:985986096316:web:f4b3e2ad1ac38031ac44b9",
+        measurementId: "G-9SKYTVJY1H"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="index.js"></script>
+
+</html>

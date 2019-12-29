@@ -10,29 +10,65 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="header"></div>
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4 maindev">
-                <div class="formdiv1">
-                    <form action="/action_page.php">
-                        <label for="fname">Email:</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your email">
+    <div class="maindevn">
+        <div class="divn1"></div>
+        <div class="divn2">
+            <div class="formdiv1">
+                <h3>Sign In</h3><br />
+                <form action="" name="daniyal">
+                    <label for="fname">Email:</label>
+                    <input type="email" id="siEmail" name="firstname" placeholder="Your email">
 
-                        <label for="lname">Password</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your password">
+                    <label for="lname">Password:</label>
+                    <input type="password" id="siPass" name="lastname" placeholder="Your password">
 
-                        <input type="submit" value="Submit">
-                    </form>
-                    <br/>
-                    <a href="formSignup.html" style="text-decoration: none;">Sign UP</a>
-                </div>
+                    <button class="subBtn" type="button" value="Submit" onclick="SignInuser()">Submit</button>
+                </form>
             </div>
-            <div class="col-4"></div>
         </div>
-        <div class="footer"></div>
+        <div class="divn3"></div>
+    </div>
+    <div class="maindevn">
+        <div class="divn1"></div>
+        <div class="divn2">
+            <div class="formdiv1">
+                <h3>Sign Up</h3><br />
+                <form action="">
+                    <label for="fname">Email:</label>
+                    <input type="email" id="suEmail" placeholder="Your email" />
+                    <br />
+                    <label for="lname">Password:</label>
+                    <input type="password" id="suPass" placeholder="Your password" />
+
+                    <button class="subBtn" type="button" value="Submit" onclick="drnUser()">Submit</button>
+                    <br/>
+                    <br/>
+                    <button class="subBtn" type="button" onclick="getUserData()">test</button>
+                </form>
+            </div>
+        </div>
+        <div class="divn3"></div>
     </div>
 </body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-storage.js"></script>
+
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyA8L81Y5nvin0UP9teIT4m6WdunZFBPryg",
+        authDomain: "olx-web-6cc22.firebaseapp.com",
+        databaseURL: "https://olx-web-6cc22.firebaseio.com",
+        projectId: "olx-web-6cc22",
+        storageBucket: "olx-web-6cc22.appspot.com",
+        messagingSenderId: "985986096316",
+        appId: "1:985986096316:web:f4b3e2ad1ac38031ac44b9",
+        measurementId: "G-9SKYTVJY1H"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="index.js"></script>
 
 </html>
